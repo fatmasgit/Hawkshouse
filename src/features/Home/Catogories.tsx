@@ -1,4 +1,4 @@
-import { ShieldCheck, Truck, Tag } from "lucide-react";
+
 import mobidat from './mobidat.png'
 import mogazyat from './mogazyat.png'
 import seeds from './seeds.png'
