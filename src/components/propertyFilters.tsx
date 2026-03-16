@@ -23,15 +23,14 @@ const FilterOption: React.FC<FilterOptionProps> = ({
         className="flex items-center justify-between cursor-pointer"
         onClick={() => setOpen(!open)}
       >
-        <h2 className="text-[#243A76] font-bold text-[20px]">{title}</h2>
+        <h2 className="text-[#243A76] font-bold font-arabic text-[28px]">{title}</h2>
 
         {/* Arrow: Down when closed, Up when open */}
-  <ChevronDown
-  size={25}
-  className={`text-[#F5841E] transition-transform duration-300 ${
-    open ? "rotate-180" : "rotate-0"
-  }`}
-/>
+        <ChevronDown
+          size={25}
+          className={`text-[#F5841E] transition-transform duration-300 ${open ? "rotate-180" : "rotate-0"
+            }`}
+        />
 
       </div>
 
@@ -44,7 +43,7 @@ const FilterOption: React.FC<FilterOptionProps> = ({
             return (
               <label
                 key={item}
-                className="flex items-center gap-3 cursor-pointer"
+                className="flex items-center gap-3 cursor-pointer "
                 onClick={() => onSelect(item)}
               >
                 {/* Custom Radio */}
@@ -55,7 +54,7 @@ const FilterOption: React.FC<FilterOptionProps> = ({
                 </div>
 
                 {/* Text */}
-                <span className="text-[#243A76] text-[16px] font-medium">
+                <span className="text-[#243A76] text-[16px] font-arabic font-semibold">
                   {item}
                 </span>
               </label>
@@ -66,6 +65,7 @@ const FilterOption: React.FC<FilterOptionProps> = ({
     </div>
   );
 };
+
 
 const Filters: React.FC = () => {
   const [selectedBrand, setSelectedBrand] = useState("نوفارم");

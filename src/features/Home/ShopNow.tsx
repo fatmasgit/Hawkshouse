@@ -1,6 +1,6 @@
 function ShopNow() {
   return (
-    <div className="w-[80%] mx-auto my-15 relative rounded-lg overflow-hidden shadow-lg h-[291px]">
+    <div dir="rtl" className="w-[80%] mx-auto my-15 relative rounded-lg overflow-hidden shadow-lg h-[291px]">
       {/* Background image */}
       <div
         className="w-full h-full bg-cover bg-center"
@@ -21,7 +21,7 @@ function ShopNow() {
   text-white 
   text-center 
   w-[173px] 
-    bg-orange-500 py-2 rounded-full
+    bg-orange py-2 rounded-full
     mb-5
 
 "> تسوق الآن

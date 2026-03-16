@@ -17,10 +17,10 @@ function SortFilters() {
   }
 
   // Always add "الكل" at the beginning
-  filters = [ ...filters ,"الكل"];
+  filters = [...filters, "الكل"];
 
   return (
-    <div className="flex justify-center gap-6 my-10 flex-wrap">
+    <div className="flex justify-center gap-6 my-10 flex-wrap" dir="rtl">
       {filters.map((filter) => {
         const isActive = activeFilter === filter;
         return (
@@ -29,10 +29,11 @@ function SortFilters() {
             onClick={() => setActiveFilter(filter)}
             className={`
               font-bold
-              text-[28px]
+              font-arabic
+              text-[30px]
               cursor-pointer
               transition
-              ${isActive ? "text-orange-500 border-b-2 border-orange-500 pb-1" : "text-[#243A76] hover:text-orange-500"}
+              ${isActive ? "text-orange border-b-2 border-orange pb-1" : "text-blue hover:text-orange"}
             `}
           >
             {filter}

@@ -6,19 +6,19 @@ function IconsDiv() {
 
 <div className="flex  flex-col items-center justify-center gap-2 w-[300px] h-[150px] bg-white shadow-[0px_3px_6px_rgba(0,0,0,0.16)] rounded-[10px]">
      < ShieldCheck  size={40}/> 
-      <p className="text-[#f5841e] text-[26px]  font-bold ">
+      <p className="text-orange text-[26px]  font-bold ">
       جودة عالية
         </p>
 </div>
 
 <div className="flex  flex-col items-center justify-center gap-3 w-[300px] h-[150px] bg-white shadow-[0px_3px_6px_rgba(0,0,0,0.16)] rounded-[10px]">
      < Truck size={40}/> 
-      <p className="text-[#f5841e] text-[26px]  font-bold ">
+      <p className="text-orange text-[26px]  font-bold ">
          توصيل سريع
         </p>
 </div><div className="flex  flex-col items-center justify-center gap-3 w-[300px] h-[150px] bg-white shadow-[0px_3px_6px_rgba(0,0,0,0.16)] rounded-[10px]">
      < Tag  size={40}/> 
-      <p className="text-[#f5841e] text-[26px]  font-bold ">
+      <p className="text-orange text-[26px]  font-bold ">
   أسعار منخفضة
         </p>
 </div>

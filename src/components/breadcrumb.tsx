@@ -14,7 +14,7 @@ function BreadCrumb() {
   }
 
   return (
-    <div className="w-[85%] mx-auto my-15 relative rounded-lg overflow-hidden shadow-lg h-[291px]">
+    <div dir="ltr" className="w-[85%] mx-auto my-15 relative rounded-lg overflow-hidden shadow-lg h-[291px]">
       {/* Background image */}
       <div
         className="w-full h-full bg-cover bg-center"

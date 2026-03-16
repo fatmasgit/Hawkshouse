@@ -23,24 +23,24 @@ const Carousel: React.FC = () => {
   };
 
   return (
-    <div className="w-[90%] mx-auto relative py-10">
+    <div className="w-[90%] mx-auto relative py-10  " dir="rtl">
       {/* Overlay content - fixed for all slides */}
       <div className="absolute top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white z-10">
-        <p className="text-2xl md:text-4xl font-bold mb-4 mt-4">وجهتك الزراعية الأحدث والاقرب</p>
+        <p className="text-[48px] font-arabic font-normal mb-4 mt-4">وجهتك الزراعية الأحدث والاقرب</p>
      <button className="
   text-[18px] 
   font-bold 
   text-white 
   text-center 
   w-[173px] 
-    bg-orange-500 py-2 rounded-full
+    bg-orange py-2 rounded-full
     mb-5 mt-2
 
 "> تسوق الآن
         </button>
       </div>
 
-      <Slider {...settings}>
+      <Slider {...settings} className="rounded-lg overflow-hidden">
         {images.map((src, index) => (
           <div key={index}>
             <img

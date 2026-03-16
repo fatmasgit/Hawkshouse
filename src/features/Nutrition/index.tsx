@@ -1,12 +1,11 @@
 import SortFilters from "../../components/sortFilters";
 import PropertyFilters from "../../components/propertyFilters";
 import Card from "../../components/Card";
-import BreadCrumb from '../../components/breadcrumb'
-
+import BreadCrumb from "../../components/breadcrumb";
 
 function NutrientsFeature() {
     return (
-        <div className="w-full">
+        <div className="w-full" dir="rtl">
             <BreadCrumb />
             <div
                 className="
@@ -22,6 +21,7 @@ w-[85%]
                     <SortFilters />
                 </div>
                 <div className="w-full  px-10 flex gap-12 ">
+                    <PropertyFilters />
                     <div className="w-[905px] flex justify-between  flex-wrap ">
                         <Card />
                         <Card />
@@ -30,9 +30,11 @@ w-[85%]
                         <Card />
                         <Card />
                     </div>
-                    <PropertyFilters /></div>
+
+                </div>
             </div>
-        </div>);
+        </div>
+    );
 }
 
 export default NutrientsFeature;

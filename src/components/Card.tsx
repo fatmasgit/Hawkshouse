@@ -17,10 +17,10 @@ const ProductCard: React.FC = () => {
 
         {/* Vertical Icons with orange border */}
         <div className="absolute top-2 right-2 flex flex-col gap-2">
-          <div className="border-2 border-orange-500 rounded-full p-1 cursor-pointer flex justify-center items-center">
+          <div className="border-2 border-orange rounded-full p-1 cursor-pointer flex justify-center items-center">
             <Eye size={20} color="#F97316" />
           </div>
-          <div className="border-2 border-orange-500 rounded-full p-1 cursor-pointer flex justify-center items-center">
+          <div className="border-2 border-orange rounded-full p-1 cursor-pointer flex justify-center items-center">
             <Heart size={20} color="#F97316" />
           </div>
         </div>
@@ -31,7 +31,7 @@ const ProductCard: React.FC = () => {
         <h3 className="font-bold text-[16px] m-0">اسم المنتج</h3>
         <p className="text-[14px] text-gray-600 m-0">وصف المنتج</p>
         <p className="font-bold text-[16px]  m-0">50 EGP</p>
-     <button className="w-full bg-[#F5841E] text-white py-2 rounded-md cursor-pointer flex items-center justify-center gap-2">
+     <button className="w-full bg-orange text-white py-2 rounded-md cursor-pointer flex items-center justify-center gap-2">
   <ShoppingCart size={18} color="white" />
   أضف للسلة
 </button>

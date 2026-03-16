@@ -39,7 +39,7 @@ function CallUs() {
   text-white 
   text-center 
   w-[173px] 
-    bg-orange-500 py-2 rounded-full
+    bg-orange py-2 rounded-full
     mb-5
 
 "> اتصل بنا
