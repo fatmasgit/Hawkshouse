@@ -1,5 +1,5 @@
 import { useState } from "react";
-import product from "./product.jpg";
+
 import { ChevronDown } from "lucide-react";
 import Card from "../../components/Card"
 
@@ -29,7 +29,7 @@ function ProductFeature({ dir = "rtl" }) {
             </span>
 
             <img
-              src={product}
+              src='/images/product.jpg'
               alt="product"
               className="w-full h-full object-cover"
             />
@@ -42,7 +42,7 @@ function ProductFeature({ dir = "rtl" }) {
                 className="bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center h-[150px] cursor-pointer hover:border hover:border-orange transition w-1/3"
               >
                 <img
-                  src={product}
+                  src='/images/product.jpg'
                   alt="thumb"
                   className="h-full w-full object-cover"
                 />

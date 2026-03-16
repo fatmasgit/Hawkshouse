@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
-import background from "./background.png";
 
 function AppNavigation() {
   return (
@@ -11,7 +10,7 @@ function AppNavigation() {
       {/* Body background only */}
       <main
         className="min-h-screen bg-no-repeat bg-cover bg-center w-full pb-20"
-        style={{ backgroundImage: `url(${background})` }}
+        style={{ backgroundImage: `url(/images/background.png)` }}
       >
         <Outlet />
       </main>

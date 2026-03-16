@@ -4,16 +4,18 @@ import { ChevronDown } from "lucide-react";
 function SignUprFeature({ dir = "rtl" }) {
   const [accountType, setAccountType] = useState(""); // selected value
   const [open, setOpen] = useState(false); // dropdown open state
-  const types = ["عميل", "تاجر"]; // options
-  const dropdownRef = useRef(null);
+  const types = ["عميل", "تاجر"]; // dropdown options
+  const dropdownRef = useRef<HTMLDivElement>(null); // properly typed ref
 
   // Close dropdown when clicking outside
   useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as Node; // ensure type for contains
+      if (dropdownRef.current && !dropdownRef.current.contains(target)) {
         setOpen(false);
       }
     };
+
     document.addEventListener("click", handleClickOutside);
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
@@ -59,7 +61,7 @@ function SignUprFeature({ dir = "rtl" }) {
               border-gray-300
               rounded-md
               px-3
-                  h-12
+              h-12
               outline-none
               focus:border-[#F5841E]
             "
@@ -135,7 +137,7 @@ function SignUprFeature({ dir = "rtl" }) {
               border-gray-300
               rounded-md
               px-3
-                 h-12
+              h-12
               outline-none
               focus:border-[#F5841E]
             "
@@ -155,7 +157,7 @@ function SignUprFeature({ dir = "rtl" }) {
               border-gray-300
               rounded-md
               px-3
-                h-12
+              h-12
               outline-none
               focus:border-[#F5841E]
             "

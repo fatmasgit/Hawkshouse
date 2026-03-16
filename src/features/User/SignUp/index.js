@@ -1,0 +1,26 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { useState, useEffect, useRef } from "react";
+import { ChevronDown } from "lucide-react";
+function SignUprFeature({ dir = "rtl" }) {
+    const [accountType, setAccountType] = useState(""); // selected value
+    const [open, setOpen] = useState(false); // dropdown open state
+    const types = ["عميل", "تاجر"]; // dropdown options
+    const dropdownRef = useRef(null); // properly typed ref
+    // Close dropdown when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (e) => {
+            const target = e.target; // ensure type for contains
+            if (dropdownRef.current && !dropdownRef.current.contains(target)) {
+                setOpen(false);
+            }
+        };
+        document.addEventListener("click", handleClickOutside);
+        return () => document.removeEventListener("click", handleClickOutside);
+    }, []);
+    return (_jsxs("div", { dir: dir, className: "\r\n        w-[85%]\r\n        mx-auto\r\n        bg-white/60\r\n        border\r\n        border-[#F5841E]\r\n        rounded-lg\r\n        overflow-hidden\r\n        p-8\r\n        flex\r\n        flex-col\r\n        gap-6\r\n        mt-15\r\n      ", children: [_jsxs("div", { className: "flex flex-col gap-3 w-9/10 mx-auto", children: [_jsx("h2", { className: "text-blue text-[22px] font-bold font-arabic", children: "\u062A\u0633\u062C\u064A\u0644 \u062D\u0633\u0627\u0628 \u062C\u062F\u064A\u062F" }), _jsx("div", { className: "h-[2px] bg-[#C9E1E6]" })] }), _jsxs("form", { className: "flex flex-col w-1/3 gap-10 mx-auto pt-5", children: [_jsxs("div", { className: "flex flex-col gap-2", children: [_jsx("label", { className: "text-blue text-[22px] font-bold font-arabic", children: "\u0627\u0644\u0627\u0633\u0645 \u0643\u0627\u0645\u0644 :" }), _jsx("input", { type: "text", className: "\r\n              w-full\r\n              border\r\n              border-gray-300\r\n              rounded-md\r\n              px-3\r\n              h-12\r\n              outline-none\r\n              focus:border-[#F5841E]\r\n            " })] }), _jsxs("div", { className: "flex flex-col gap-2", children: [_jsx("label", { className: "text-blue text-[22px] font-bold font-arabic", children: "\u0631\u0642\u0645 \u0627\u0644\u0647\u0627\u062A\u0641 :" }), _jsx("input", { type: "tel", className: "\r\n              w-full\r\n              border\r\n              border-gray-300\r\n              rounded-md\r\n              px-3\r\n              h-12\r\n              outline-none\r\n              focus:border-[#F5841E]\r\n            " })] }), _jsxs("div", { className: "flex flex-col gap-2 relative", ref: dropdownRef, children: [_jsx("label", { className: "text-blue text-[22px] font-bold font-arabic", children: "\u0646\u0648\u0639 \u0627\u0644\u062D\u0633\u0627\u0628 :" }), _jsxs("div", { className: "relative w-1/2", children: [_jsxs("div", { onClick: () => setOpen(!open), className: "flex items-center justify-between border border-black rounded-md px-4 h-12 text-orange font-medium cursor-pointer", children: [_jsx("span", { children: accountType || "اختر نوع الحساب" }), _jsx(ChevronDown, { size: 18 })] }), open && (_jsx("div", { className: "absolute left-0 mt-1 w-full bg-white border border-black rounded-md overflow-hidden shadow-md z-20", children: types.map((item) => (_jsx("div", { onClick: () => {
+                                                setAccountType(item);
+                                                setOpen(false);
+                                            }, className: `px-4 py-2 text-start cursor-pointer transition
+                      ${accountType === item ? "bg-orange text-white" : "hover:bg-orange/20"}`, children: item }, item))) }))] })] }), _jsxs("div", { className: "flex flex-col gap-2", children: [_jsx("label", { className: "text-blue text-[22px] font-bold font-arabic", children: "\u0643\u0644\u0645\u0629 \u0627\u0644\u0645\u0631\u0648\u0631 :" }), _jsx("input", { type: "password", className: "\r\n              w-full\r\n              border\r\n              border-gray-300\r\n              rounded-md\r\n              px-3\r\n              h-12\r\n              outline-none\r\n              focus:border-[#F5841E]\r\n            " })] }), _jsxs("div", { className: "flex flex-col gap-2", children: [_jsx("label", { className: "text-blue text-[22px] font-bold font-arabic", children: "\u0623\u0639\u062F \u0643\u062A\u0627\u0628\u0629 \u0643\u0644\u0645\u0629 \u0627\u0644\u0645\u0631\u0648\u0631 :" }), _jsx("input", { type: "password", className: "\r\n              w-full\r\n              border\r\n              border-gray-300\r\n              rounded-md\r\n              px-3\r\n              h-12\r\n              outline-none\r\n              focus:border-[#F5841E]\r\n            " })] }), _jsx("button", { type: "submit", className: "\r\n            mt-3\r\n            mx-auto\r\n            bg-[#F5841E]\r\n            text-white\r\n            px-10\r\n            py-2\r\n            rounded-md\r\n            shadow\r\n            hover:opacity-90\r\n          ", children: "\u062A\u0633\u062C\u064A\u0644" })] })] }));
+}
+export default SignUprFeature;

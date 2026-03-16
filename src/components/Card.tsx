@@ -1,6 +1,5 @@
-import React from "react";
+
 import { Eye, Heart } from "lucide-react";
-import product from './product.jpg'
 import { ShoppingCart } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -18,7 +17,7 @@ const ProductCard: React.FC = () => {
       {/* Image container */}
       <div className="relative w-61.25 h-[225px] border border-[#D2D1D1] rounded-[10px] overflow-hidden mx-auto mt-2">
         <img
-          src={product} alt="اسم المنتج"
+          src='/images/product.jpg' alt="اسم المنتج"
           className="w-full h-full object-cover"
         />
 

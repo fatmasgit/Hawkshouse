@@ -1,5 +1,5 @@
 // Carousel.tsx
-import React from "react";
+
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -27,7 +27,7 @@ const Carousel: React.FC = () => {
       {/* Overlay content - fixed for all slides */}
       <div className="absolute top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white z-10">
         <p className="text-[48px] font-arabic font-normal mb-4 mt-4">وجهتك الزراعية الأحدث والاقرب</p>
-     <button className="
+        <button className="
   text-[18px] 
   font-bold 
   text-white 

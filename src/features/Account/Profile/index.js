@@ -1,0 +1,5 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+// ProfileForm.jsx
+export default function Profile() {
+    return (_jsxs("form", { dir: 'rtl', className: "flex flex-col items-start gap-6 flex-1", children: [_jsx("input", { type: "text", placeholder: "\u0623\u0633\u0645 \u0627\u0644\u0645\u0633\u062A\u062E\u062F\u0645", className: "w-[420px] border border-orange rounded-md px-4 py-3 outline-none text-start" }), _jsx("input", { type: "tel", placeholder: "012345678", className: "w-[420px] border border-orange rounded-md px-4 py-3 outline-none text-start" }), _jsx("input", { type: "password", placeholder: "********", className: "w-[420px] border border-orange rounded-md px-4 py-3 outline-none text-start" }), _jsxs("div", { className: "flex gap-4 mt-4", children: [_jsx("button", { type: "submit", className: "bg-orange text-white px-8 py-1 rounded", children: "\u062D\u0641\u0638" }), _jsx("button", { type: "button", className: "border border-orange text-orange px-6 py-1 rounded", children: "\u0625\u0631\u062C\u0627\u0639" })] })] }));
+}

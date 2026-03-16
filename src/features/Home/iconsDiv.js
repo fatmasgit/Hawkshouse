@@ -1,0 +1,6 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { ShieldCheck, Truck, Tag } from "lucide-react";
+function IconsDiv() {
+    return (_jsxs("div", { className: "w-[70%] mx-auto my-15 flex justify-around ", children: [_jsxs("div", { className: "flex  flex-col items-center justify-center gap-2 w-[300px] h-[150px] bg-white shadow-[0px_3px_6px_rgba(0,0,0,0.16)] rounded-[10px]", children: [_jsx(ShieldCheck, { size: 40 }), _jsx("p", { className: "text-orange text-[26px]  font-bold ", children: "\u062C\u0648\u062F\u0629 \u0639\u0627\u0644\u064A\u0629" })] }), _jsxs("div", { className: "flex  flex-col items-center justify-center gap-3 w-[300px] h-[150px] bg-white shadow-[0px_3px_6px_rgba(0,0,0,0.16)] rounded-[10px]", children: [_jsx(Truck, { size: 40 }), _jsx("p", { className: "text-orange text-[26px]  font-bold ", children: "\u062A\u0648\u0635\u064A\u0644 \u0633\u0631\u064A\u0639" })] }), _jsxs("div", { className: "flex  flex-col items-center justify-center gap-3 w-[300px] h-[150px] bg-white shadow-[0px_3px_6px_rgba(0,0,0,0.16)] rounded-[10px]", children: [_jsx(Tag, { size: 40 }), _jsx("p", { className: "text-orange text-[26px]  font-bold ", children: "\u0623\u0633\u0639\u0627\u0631 \u0645\u0646\u062E\u0641\u0636\u0629" })] })] }));
+}
+export default IconsDiv;

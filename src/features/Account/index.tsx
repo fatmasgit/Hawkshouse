@@ -1,33 +1,34 @@
 import { useState } from "react";
 import { Truck, Heart, MapPin, TicketPercent, User } from "lucide-react";
 import Profile from "./Profile";
-//import OrdersTab from "./OrdersTab";
-//import FavoritesTab from "./FavoritesTab";
 import ShippingAddress from "./Addresses";
 import GiftCards from "./GiftCards";
 import Favorites from "./Favorites";
 import Orders from "./Orders";
 
-export const getTabs = () => [
+// Tabs array with icons, labels, and keys
+export const tabsArray = [
   { key: "orders", label: "الطلبات", icon: <Truck size={28} /> },
   { key: "favorites", label: "المفضلة", icon: <Heart size={28} /> },
   { key: "addresses", label: "العناوين", icon: <MapPin size={28} /> },
   { key: "gifts", label: "بطاقات الهدايا", icon: <TicketPercent size={28} /> },
   { key: "profile", label: "الملف الشخصى", icon: <User size={28} /> },
-];
+] as const;
+
+// Type of tab keys inferred from tabsArray
+type TabKey = (typeof tabsArray)[number]["key"];
+
+// Mapping each tab key to its component
+const tabComponents: Record<TabKey, React.ReactElement> = {
+  orders: <Orders />,
+  favorites: <Favorites />,
+  addresses: <ShippingAddress />,
+  gifts: <GiftCards />,
+  profile: <Profile />,
+};
 
 export default function AccountFeature({ dir = "rtl" }) {
-  const [activeTab, setActiveTab] = useState("profile");
-  const tabs = getTabs();
-
-  // Mapping tab keys to components
-  const tabComponents = {
-    orders: <Orders />,
-    favorites: <Favorites />,
-    addresses: <ShippingAddress />,
-    gifts: <GiftCards />,
-    profile: <Profile />,
-  };
+  const [activeTab, setActiveTab] = useState<TabKey>("profile");
 
   return (
     <div
@@ -40,16 +41,14 @@ export default function AccountFeature({ dir = "rtl" }) {
         <div className="w-full h-[2px] bg-[#C9E1E6]" />
       </div>
 
-      <div className="flex ">
+      <div className="flex">
         {/* Sidebar / Tabs */}
-        <div className="flex flex-col gap-7 w-1/4 ">
-          {tabs.map((tab) => (
+        <div className="flex flex-col gap-7 w-1/4">
+          {tabsArray.map((tab) => (
             <div
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
-              className={`flex items-center font-arabic  font-bold text-[24px] justify-start gap-4 cursor-pointer ${activeTab === tab.key
-                ? "text-orange "
-                : "text-blue"
+              className={`flex items-center font-arabic font-bold text-[24px] justify-start gap-4 cursor-pointer ${activeTab === tab.key ? "text-orange" : "text-blue"
                 }`}
             >
               {tab.icon}

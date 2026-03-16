@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { ChevronDown, X } from "lucide-react";
-import product from "./product.jpg";
+
 
 function OrderCard({ dir = "rtl", quantity: initialQuantity = 1 }) {
   const { pathname } = useLocation();
@@ -36,7 +36,7 @@ function OrderCard({ dir = "rtl", quantity: initialQuantity = 1 }) {
         )}
         <div className="w-[120px] h-[110px] rounded-md flex items-center justify-center overflow-hidden">
           <img
-            src={product}
+            src='/images/product.jpg'
             alt="product"
             className="object-cover w-full h-full"
           />

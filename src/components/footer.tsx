@@ -1,7 +1,5 @@
-// Footer.tsx
-import React from "react";
+
 import { Facebook, Twitter, Instagram } from "lucide-react"; // Lucide icons
-import logo from "./logo.jpeg"; // replace with your logo path
 
 const Footer: React.FC = () => {
   return (

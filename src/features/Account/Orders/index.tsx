@@ -1,4 +1,4 @@
-import React from "react";
+
 import { ShoppingCart } from "lucide-react"; // Lucide icon
 import { useNavigate } from "react-router-dom";
 
