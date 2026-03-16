@@ -1,9 +1,7 @@
-import { useState } from "react";
+
 import OrderCard from "../../components/OrderCard";
 
 function CartOrder({ dir = "rtl" }) {
-  const payments = ["الدفع نقدا عند الاستلام"];
-  const [activePayment, setActivePayment] = useState(payments[0]);
 
   // Example array of order cards
   const orders = [1, 2]; // replace with your actual order data
@@ -13,7 +11,7 @@ function CartOrder({ dir = "rtl" }) {
       dir={dir}
       className="flex flex-col w-[90%] me-auto"
     >
-      {orders.map((order, index) => (
+      {orders.map((index) => (
         <div key={index} className="flex flex-col gap-6">
           <OrderCard />
           {/* Divider except after the last card */}

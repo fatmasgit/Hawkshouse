@@ -1,5 +1,4 @@
-// Favorites.jsx
-import { TicketPercent } from "lucide-react";
+
 import OrderCard from "../../../components/OrderCard";
 
 
