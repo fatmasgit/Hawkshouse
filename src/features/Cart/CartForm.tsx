@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function CartForm({ dir = "rtl" }) {
   const payments = ["الدفع نقدا عند الاستلام"];
@@ -189,9 +190,11 @@ function CartForm({ dir = "rtl" }) {
       </div>
 
       {/* Checkout Button */}
-      <button className="bg-orange text-white py-3 rounded-md font-bold text-[20px] hover:opacity-90 transition">
-        إتمام الشراء
-      </button>
+      <Link to="/order-placed">
+        <button className="bg-orange text-white py-3 rounded-md font-bold text-[20px] hover:opacity-90 transition w-full">
+          إتمام الشراء
+        </button>
+      </Link>
     </div>
   );
 }

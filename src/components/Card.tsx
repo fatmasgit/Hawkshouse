@@ -2,11 +2,19 @@ import React from "react";
 import { Eye, Heart } from "lucide-react";
 import product from './product.jpg'
 import { ShoppingCart } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 
 const ProductCard: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    // Navigate to the product page
+    navigate(`/product/1`);
+    // Optionally, add to cart logic here
+  };
   return (
-    <div className="w-61.25 h-[346px] flex flex-col font-sans   rounded-lg overflow-hidden mb-10">
+    <div className="w-61.25 h-[346px] flex flex-col font-sans    rounded-lg overflow-hidden mb-10">
       {/* Image container */}
       <div className="relative w-61.25 h-[225px] border border-[#D2D1D1] rounded-[10px] overflow-hidden mx-auto mt-2">
         <img
@@ -28,13 +36,17 @@ const ProductCard: React.FC = () => {
 
       {/* Text and button */}
       <div className="flex flex-col gap-1  flex-1" dir="rtl">
-        <h3 className="font-bold text-[16px] m-0">اسم المنتج</h3>
-        <p className="text-[14px] text-gray-600 m-0">وصف المنتج</p>
-        <p className="font-bold text-[16px]  m-0">50 EGP</p>
-     <button className="w-full bg-orange text-white py-2 rounded-md cursor-pointer flex items-center justify-center gap-2">
-  <ShoppingCart size={18} color="white" />
-  أضف للسلة
-</button>
+        <h3 className="font-bold font-arabic text-[16px] m-0">اسم المنتج</h3>
+        <p className="text-[14px] font-arabic text-gray-600 m-0">وصف المنتج</p>
+        <p className="font-bold font-arabic text-[16px]  m-0">50 EGP</p>
+
+        <button
+          onClick={handleClick}
+          className="w-full bg-orange font-arabic text-white py-2 rounded-md cursor-pointer flex items-center justify-center gap-2"
+        >
+          <ShoppingCart size={18} color="white" />
+          أضف للسلة
+        </button>
 
       </div>
     </div>

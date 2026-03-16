@@ -14,11 +14,12 @@ function LoginFeature({ dir = "rtl" }) {
         flex
         flex-col
         gap-8
+        mt-15
       "
     >
       {/* title */}
-      <div className="flex flex-col gap-3">
-        <h2 className="text-right text-[#2F3A5F] font-semibold text-lg">
+      <div className="flex flex-col gap-3 w-9/10 mx-auto">
+        <h2 className="text-blue text-[26px] font-bold font-arabic">
           تسجيل دخول
         </h2>
 
@@ -30,7 +31,7 @@ function LoginFeature({ dir = "rtl" }) {
 
         {/* full name */}
         <div className="flex flex-col gap-2 w-[360px]">
-          <label className="text-right text-[#2F3A5F] font-medium">
+          <label className="text-blue text-[22px] font-bold font-arabic ">
             الاسم كامل :
           </label>
 
@@ -42,7 +43,7 @@ function LoginFeature({ dir = "rtl" }) {
               border-gray-300
               rounded-md
               px-3
-              py-2
+                  h-12
               outline-none
               focus:border-[#F5841E]
             "
@@ -51,7 +52,7 @@ function LoginFeature({ dir = "rtl" }) {
 
         {/* phone */}
         <div className="flex flex-col gap-2 w-[360px]">
-          <label className="text-right text-[#2F3A5F] font-medium">
+          <label className="text-blue text-[22px] font-bold font-arabic ">
             رقم الهاتف :
           </label>
 
@@ -63,7 +64,7 @@ function LoginFeature({ dir = "rtl" }) {
               border-gray-300
               rounded-md
               px-3
-              py-2
+                  h-12
               outline-none
               focus:border-[#F5841E]
             "
@@ -72,7 +73,7 @@ function LoginFeature({ dir = "rtl" }) {
 
         {/* password */}
         <div className="flex flex-col gap-2 w-[360px]">
-          <label className="text-right text-[#2F3A5F] font-medium">
+          <label className="text-blue text-[22px] font-bold font-arabic ">
             كلمة المرور :
           </label>
 
@@ -84,7 +85,7 @@ function LoginFeature({ dir = "rtl" }) {
               border-gray-300
               rounded-md
               px-3
-              py-2
+                  h-12
               outline-none
               focus:border-[#F5841E]
             "
@@ -99,7 +100,7 @@ function LoginFeature({ dir = "rtl" }) {
             bg-[#F5841E]
             text-white
             px-12
-            py-2
+                h-12
             rounded-md
             shadow
             hover:opacity-90

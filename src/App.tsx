@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Pesticides from "./pages/Pesticides";
 import Seeds from "./pages/Seeds";
 import Product from "./pages/Product"; // 👈 renamed
-import Cart from "./pages/cart"; // 👈
+import Cart from "./pages/Cart"; // 👈
 import AppNavigation from "./layouts/appNavigation";
 import SignUp from "./pages/SignUp"
 import LogIn from "./pages/LogIn"
@@ -24,9 +24,9 @@ function App() {
         { path: "/pesticides", element: <Pesticides /> },
         { path: "/cart", element: <Cart /> },
         { path: "/order-placed", element: <OrderPlacement /> },
-              { path: "/signup", element: <SignUp /> },
-                  { path: "/login", element: <LogIn /> },
-                     { path: "/account", element: <Account /> },
+        { path: "/signup", element: <SignUp /> },
+        { path: "/login", element: <LogIn /> },
+        { path: "/account", element: <Account /> },
 
         // ✅ Dynamic Product Route
         { path: "/product/:id", element: <Product /> },

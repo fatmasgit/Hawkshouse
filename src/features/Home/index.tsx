@@ -10,7 +10,7 @@ function HomeFeatures() {
   return (
     <div className="w-full">
       <Homecarousel />
-      <Catogories/>
+      <Catogories />
       <PromotedProducts />
       <ShopNow />
       <BestSellingProducts />

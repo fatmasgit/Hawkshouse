@@ -23,12 +23,12 @@ const FilterOption: React.FC<FilterOptionProps> = ({
         className="flex items-center justify-between cursor-pointer"
         onClick={() => setOpen(!open)}
       >
-        <h2 className="text-[#243A76] font-bold font-arabic text-[28px]">{title}</h2>
+        <h2 className="text-blue font-bold font-arabic text-[28px]">{title}</h2>
 
         {/* Arrow: Down when closed, Up when open */}
         <ChevronDown
           size={25}
-          className={`text-[#F5841E] transition-transform duration-300 ${open ? "rotate-180" : "rotate-0"
+          className={`text-orange transition-transform duration-300 ${open ? "rotate-180" : "rotate-0"
             }`}
         />
 
@@ -47,14 +47,14 @@ const FilterOption: React.FC<FilterOptionProps> = ({
                 onClick={() => onSelect(item)}
               >
                 {/* Custom Radio */}
-                <div className="w-[32px] h-[32px] rounded-[14px] border-2 border-[#243A76] bg-white flex items-center justify-center">
+                <div className="w-[32px] h-[32px] rounded-[14px] border-2 border-blue bg-white flex items-center justify-center">
                   {isActive && (
-                    <div className="w-[22px] h-[22px] bg-[#F5841E] rounded-[10px]" />
+                    <div className="w-[22px] h-[22px] bg-orange rounded-[10px]" />
                   )}
                 </div>
 
                 {/* Text */}
-                <span className="text-[#243A76] text-[16px] font-arabic font-semibold">
+                <span className="text-blue text-[16px] font-arabic font-semibold">
                   {item}
                 </span>
               </label>

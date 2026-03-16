@@ -1,6 +1,8 @@
 import { useState } from "react";
 import product from "./product.jpg";
 import { ChevronDown } from "lucide-react";
+import Card from "../../components/Card"
+
 
 function ProductFeature({ dir = "rtl" }) {
   const [quantity, setQuantity] = useState(1);
@@ -179,6 +181,18 @@ function ProductFeature({ dir = "rtl" }) {
           التربة قبل غرس الأشجار والنباتات لأن ذلك أسهل بكثير من إضافته بعد
           الزراعة.
         </p>
+      </div>
+
+      <div className="w-full ">
+        <span
+          className="text-[30px] font-bold font-arabic text-start text-blue   my-5  block "
+        >المنتجات المروجة</span>
+        <div className="w-[95%]  flex mx-auto justify-between">
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </div>
       </div>
     </div>
   );

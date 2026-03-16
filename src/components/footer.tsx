@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
     <footer className="w-full bg-gradient-to-b from-[#0D4F8B] to-[#121D3B] text-white font-sans ">
       {/* Top Content */}
       <div className="w-full mx-auto px-32 pt-16 pb-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-0" dir="rtl">
-        
+
         {/* Right: Links */}
         <div className="flex flex-col space-y-2 ">
           <p className="cursor-pointer hover:underline">من نحن</p>
@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
 
         {/* Center: Logo */}
         <div className="flex justify-center">
-          <img src={logo} alt="hawkshouse logo" className="w-36 md:w-48" />
+          <img src="/images/logo.png" alt="hawkshouse logo" className="w-36 md:w-48 bg-white" />
         </div>
 
         {/* Left: Contact + Socials */}
@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
           <p className="font-semibold">تواصل معنا</p>
           <p>Info@yourdomain.com</p>
           <p>+0123456789</p>
-              <div className="flex gap-6  mt-2">
+          <div className="flex gap-6  mt-2">
             <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center cursor-pointer hover:bg-white/30 transition">
               <Instagram size={16} color="#17293D" />
             </div>
@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
       <div className="border-t border-white/30  py-6 px-8 mx-20 flex flex-col md:flex-row justify-between items-center text-sm space-y-2 md:space-y-0">
 
         <p>Copyright © Date Name. All rights reserved.</p>
-             <div className="flex space-x-4" dir="rtl">
+        <div className="flex space-x-4" dir="rtl">
           <p className="cursor-pointer hover:underline">البنود والظروف</p>
           <p className="cursor-pointer hover:underline">سياسة خاصة</p>
         </div>
